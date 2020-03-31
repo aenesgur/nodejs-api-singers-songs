@@ -1,43 +1,35 @@
-# nodejs-api-singers-songs
-
-[![Build status](https://api.travis-ci.org/meseven/node-egitimi-movie-api.svg)](https://travis-ci.org/meseven/node-egitimi-movie-api)
 
 # node-egitimi-movie-api
-Udemy üzerinde yayınlanan ["Sıfırdan Her Yönüyle Node.JS"](http://bit.ly/ndjsm) adlı eğitim setinde "Express ve MongoDB ile Restful API Geliştirme Projesi" bölümünde kullanılan repodur.
 
-
-[![nodejs dersleri](https://mehmetseven.net/content/images/2017/12/nodejs-mehmet-seven.jpg)](http://bit.ly/ndjsm)
-
-
-# Movies
+# Songs
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/movies | `GET` | Empty | List all movies. |
-| /api/movies | `POST` | {'title':'foo', 'category':'bar', 'country':'Turkey', year:1990, director:"id", imdb_score: 9.7 } | Create a new movie. |
-| /api/movies/:movie_id | `GET` | Empty | Get a movie. |
-| /api/movies/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
-| /api/movies/:movie_id | `DELETE` | Empty | Delete a movie. |
-| /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |
-| /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
+| /api/songs | `GET` | Empty | List all movies. |
+| /api/songs | `POST` | {'name':'Bohemian Rhapsody', 'type':'Rock', 'published_year':'1975', sold_piece:1990, singer_id:"id"} | Create a new song. |
+| /api/songs/:song_id | `GET` | Empty | Get a movie. |
+| /api/songs/:song_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a song with new info. |
+| /api/songs/:song_id | `DELETE` | Empty | Delete a song. |
+| /api/songs/top10 | `GET` | Empty | Get the top 10 songs. |
+| /api/songs/between/:start_year/:end_year | `GET` | Empty | Songs between two dates. |
 
-# Directors
+# Singers
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/directors | `GET` | Empty | List all directors. |
-| /api/directors | `POST` | { name: 'foo', surname:'bar', bio:'lorem ipsum' } | Create a new director. |
-| /api/directors/:director_id | `GET` | Empty | Get a director. |
-| /api/directors/:director_id | `PUT` | {'name':'foo', 'surname':'bar', 'bio': 'lorem'} | Update a director with new info. |
-| /api/directors/:director_id | `DELETE` | Empty | Delete a director. |
-| /api/directors/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
+| /api/singers | `GET` | Empty | List all singers. |
+| /api/singers | `POST` | { name: 'Queen', surname:'', is_group: true,country:'USA' } | Create a new singer. |
+| /api/singers/:singer_id | `GET` | Empty | Get a singer. |
+| /api/singers/:singer_id | `PUT` | {'name':'foo', 'surname':'bar', '} | Update a singer with new info. |
+| /api/singers/:singer_id | `DELETE` | Empty | Delete a singer. |
+
 
 # Index
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /register | `POST` | { username: 'foo', password:'1234' } | Create a new user. |
-| /authenticate | `POST` | { username: 'foo', password:'1234' } | Generate a token. |
+| /register | `POST` | { username: 'foo', password:'123456' } | Create a new user. |
+| /authenticate | `POST` | { username: 'foo', password:'123456' } | Generate a token. |
 
 
 # Demo
