@@ -11,7 +11,6 @@ const SingerSchema = new Schema({
    surname: {
     type: String,
     maxlength: [60, '`{PATH}` alanı (`{VALUE}`), ({MAXLENGTH}) karakterden küçük olmalıdır.' ],
-    minlength: [2, '`{PATH}` alanı (`{VALUE}`), ({MINLENGTH}) karakterden büyük olmalıdır.' ]
    },
    is_group: {
     type:Boolean,

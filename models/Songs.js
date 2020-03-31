@@ -7,7 +7,7 @@ const SongSchema = new Schema({
     name:{
         type: String,
         required: [true, '`{PATH}` alanı zorunludur.'],
-        maxlength: [15, '`{PATH}` alanı (`{VALUE}`), ({MAXLENGTH}) karakterden küçük olmalıdır.' ],
+        maxlength: [150, '`{PATH}` alanı (`{VALUE}`), ({MAXLENGTH}) karakterden küçük olmalıdır.' ],
         minlength: [2, '`{PATH}` alanı (`{VALUE}`), ({MINLENGTH}) karakterden büyük olmalıdır.' ]
     },
     type: {
