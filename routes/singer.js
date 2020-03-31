@@ -65,6 +65,62 @@ router.get('/',(req,res)=>{
   }))
 });
 
+// Get only groups
+router.get('/group',(req,res)=>{
+  const promise = Singer.aggregate([
+    {
+      $lookup: {
+        from: 'songs',
+        localField: '_id',
+        foreignField: 'singer_id',
+        as: 'songs'
+      }
+    },
+    {
+      $unwind: {
+        path: '$songs',
+        preserveNullAndEmptyArrays: true
+      }
+    },
+    {
+      $match: {
+        is_group: true
+      }
+    },
+    {
+      $group: {
+        _id: {
+          _id: '$_id',
+          name: '$name',
+          surname: '$surname',
+          is_group:'$is_group',
+          country:'$country'
+        },
+        songs: {
+          $push: '$songs'
+        }
+      }
+    },
+    {
+      $project: {
+        _id: '$_id._id',
+        name: '$_id.name',
+        surname: '$_id.surname',
+        is_group: '$_id.is_group',
+        country:'$_id.country',
+        songs: '$songs'
+      }
+    }
+  ]);
+
+  promise.then((data)=>{
+    res.json(data);
+  })
+  .catch(((err)=>{
+    res.json(err);
+  }))
+});
+
 router.get('/:singer_id',(req,res)=>{
   const promise = Singer.aggregate([
     {
@@ -119,6 +175,7 @@ router.get('/:singer_id',(req,res)=>{
     res.json(err);
   }))
 });
+
 
 router.put('/:singer_id',(req,res,next)=>{
   const singerUpdate = Singer.findByIdAndUpdate(req.params.singer_id,req.body,{new:true});

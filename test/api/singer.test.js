@@ -32,6 +32,19 @@ describe('api/singers test',()=>{
             });
       });
 
+      describe('/GET group singers',()=>{
+        it('it should GET only groups singers',(done)=>{
+            chai.request(server)
+                .get('/api/singers/group')
+                .set('x-access-token',token)
+                .end((err,res)=>{
+                    res.should.have.status(200);
+                    res.body.should.be.a('array');
+                    done();
+                });
+            });
+      });
+
       describe('/POST singers',()=>{
           it('it should POST the singer',(done)=>{
           const singerTestData = {
