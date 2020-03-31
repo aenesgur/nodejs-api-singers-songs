@@ -33,6 +33,11 @@
 
 
 # Demo
-[Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
+[Live demo on Heroku](https://nodejs-api-app-singer-songs.herokuapp.com/)
+
+[Get All Singers](https://nodejs-api-app-singer-songs.herokuapp.com/api/singers?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWF0IjoxNTg1NjcyOTA2fQ.rnB0ozBf2Z13Qp_zEKbH39ycZCxpHNrkvDmjVyD94kE)
+[Get Singer](https://nodejs-api-app-singer-songs.herokuapp.com/api/singers/5e83a1d74311a205a8739ec0?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWF0IjoxNTg1NjcyOTA2fQ.rnB0ozBf2Z13Qp_zEKbH39ycZCxpHNrkvDmjVyD94kE)
+[Get All Songs](https://nodejs-api-app-singer-songs.herokuapp.com/api/songs?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWF0IjoxNTg1NjcyOTA2fQ.rnB0ozBf2Z13Qp_zEKbH39ycZCxpHNrkvDmjVyD94kE)
+[Get Song](https://nodejs-api-app-singer-songs.herokuapp.com/api/songs/5e83a24a573ce00eccb3bf5d?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWF0IjoxNTg1NjcyOTA2fQ.rnB0ozBf2Z13Qp_zEKbH39ycZCxpHNrkvDmjVyD94kE)
 
 enjoy!
