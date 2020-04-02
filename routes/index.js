@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/Users');
 
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express Generator' });
 });
 
 router.post('/register', (req, res, next) => { //signup
@@ -30,7 +30,6 @@ router.post('/register', (req, res, next) => { //signup
 
 router.post('/authenticate',(req,res) => { //login
   const {username , password} = req.body;
-  // token-example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWF0IjoxNTg1NjcyOTA2fQ.rnB0ozBf2Z13Qp_zEKbH39ycZCxpHNrkvDmjVyD94kE
   User.findOne({
     username: username
   }, (err,user)=>{
